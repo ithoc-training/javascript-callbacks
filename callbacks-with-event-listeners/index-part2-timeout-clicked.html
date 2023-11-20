@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callbacks with Timouts</title>
+</head>
+<body>
+
+<button id="setTimeout">Set Timeout</button>
+
+<script>
+    function timeoutClicked() {
+        console.log("Timeout clicked");
+
+        setTimeout(() => {
+            console.log("This message is shown 3 seconds after timeout clicked");
+        }, 3000);
+    }
+
+    document.getElementById("setTimeout").addEventListener("click", timeoutClicked);
+</script>
+
+</body>
+</html>

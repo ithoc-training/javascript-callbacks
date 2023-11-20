@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callbacks with Intervals</title>
+</head>
+<body>
+
+<button id="setInterval">Set Interval</button>
+<button id="stopInterval">Stop Interval</button>
+
+<script>
+
+    let intervalId = null;
+
+    function setIntervalClicked() {
+        console.log("SetInterval clicked");
+
+        intervalId = setInterval(intervalFunction, 2000);
+    }
+
+    function intervalFunction() {
+        console.log("This message shows every 2 seconds after set.");
+    }
+
+    function stopInterval() {
+        clearInterval(intervalId);
+        console.log("Interval stopped.");
+    }
+
+    document.getElementById("setInterval").addEventListener("click", setIntervalClicked);
+    document.getElementById("stopInterval").addEventListener("click", stopInterval);
+</script>
+
+</body>
+</html>
